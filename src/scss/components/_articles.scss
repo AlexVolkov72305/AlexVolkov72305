@@ -1,0 +1,125 @@
+#articles {
+	.article-1 {
+	  border-radius: 8px;
+	  background-color: #fff;
+	  border: solid 1px #d8dde6;
+	  border-top: none;
+	  padding: 0 16px 16px;
+	  margin-bottom: 32px;
+	  position: relative;
+
+	  @include media-breakpoint-up(sm) {
+	  	padding: 16px;
+	  	border-top: solid 1px #d8dde6;
+	  }
+	  &:last-of-type {
+	  	margin-bottom: 48px;
+	  }
+		.content-row {
+			margin-bottom: 16px;
+
+		  .tags-list {
+		  	margin-bottom: 12px;
+		  }
+			.title {
+			  font-size: 24px;
+			  line-height: 1.33;
+			  letter-spacing: 0.3px;
+			  color: #4a4a4a;
+			  margin: 0 0 8px;
+			}
+			.thumbnail-col {
+				padding: 0;
+				margin-bottom: 16px;
+
+			  @include media-breakpoint-up(sm) {
+			  	padding-left: 16px;
+			  	margin-bottom: 0;
+			  }
+			  .article_image {
+			  	width: 100%;
+			  	height: auto;
+					border-radius: 8px 8px 0 0;
+
+				  @include media-breakpoint-up(sm) {
+				  	border-radius: 8px;
+				  }
+			  }
+			}
+			.title-col .info-block {
+				display: flex;
+
+			  @include media-breakpoint-up(md) {
+			  	display: none;
+			  }
+			}
+			.text-col .info-block {
+				display: none;
+
+			  @include media-breakpoint-up(md) {
+			  	display: flex;
+			  }
+			}
+		  .info-block {
+				margin-bottom: 12px;
+		  }
+		  .text {
+		  	position: relative;
+				font-size: 16px;
+				line-height: 24px;
+				letter-spacing: 0.2px;
+				color: #4a4a4a;
+				display: -webkit-box;
+				-webkit-line-clamp: 6;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				max-height: calc(6 * 24px);
+
+			  @include media-breakpoint-up(sm) {
+			  	-webkit-line-clamp: 5;
+			  	max-height: calc(5 * 24px);
+			  }
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					height: 50%;
+					width: 100%;
+					background-image: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+				}
+		  }
+		}
+		.bottom-row {
+			.item {
+				padding-right: 0;
+
+				img {
+					margin-right: 4px;
+				}
+				.text {
+				  font-size: 14px;
+				  letter-spacing: 0.4px;
+				  color: #54698d;
+
+				  .description {
+					  @include media-breakpoint-down(sm) {
+					  	display: none;
+					  }
+				  }
+				}
+			}
+		}
+	}
+	.article-2 {
+
+	  margin-bottom: 32px;
+	}
+	.banner {
+		margin-bottom: 32px;
+
+		img {
+			width: 100%;
+		}
+	}
+}
